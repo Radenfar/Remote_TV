@@ -1,12 +1,30 @@
-#quickLinks {
-    background-color: cadetblue;
-    display: inline-block;
-    top: 10%;
+* {
+    box-sizing: border-box;
 }
 
+#quickLinks {
+    background-color: #5F9EA0;
+    text-align: center;
+    border: 10px solid #000000;
+    height: 220px;
+    display: flex;
+}
+
+#imageContainer {
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+#searchBarContainer {
+    height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+
 #searchBar {
-    background-color:aqua;
-    display: inline-block;
+    font-family: Verdana;
+    margin: auto;
 }
 
 #actionTable {
