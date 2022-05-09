@@ -1,0 +1,64 @@
+#bannerblock {
+	background-color: #527a7a;
+	text-align: center;
+}
+
+#info {
+	float: center;
+	background-color: #527a7a;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border:5px;
+	border-style: solid;
+	border-color: #000080;
+}	
+
+#buttons {
+	background-color: #527a7a;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border:5px;
+	border-style: solid;
+	border-color: #000080;
+}
+
+.myButton {
+	background-color:#32c1b8;
+	border-radius:28px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px ##000000;
+}
+.myButton:hover {
+	background-color:#3875d1;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+#gallimages {
+	text-align: center;
+}
+
+#gallery {
+	background-color:#527a7a;<!--background color for the gallery-->
+	align: center;<!--aligns the gallery too the middle of the page-->
+}
+#gallery {
+	margin: auto;
+	width: 50%;
+	border: 3px solid blue;<!--border size and color-->
+	padding: 10px;<!--padding around the edge of the gallery box-->
+}
