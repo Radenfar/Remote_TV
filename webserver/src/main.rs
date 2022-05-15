@@ -5,7 +5,7 @@ use std::io::prelude::*;
 
 fn main() {
     println!("Starting");
-    let listener = TcpListener::bind("127.0.0.1:7777").unwrap();
+    let listener = TcpListener::bind("192.168.1.82:7777").unwrap();
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
@@ -21,6 +21,7 @@ fn handle_connection(mut stream: TcpStream) {
 
     let get = b"GET / HTTP/1.1\r\n";
     let remote = b"GET /remote HTTP/1.1\r\n";
+    let downloads = b"GET /downloads HTTP/1.1\r\n";
 
     let (status_line, filename) =
         if buffer.starts_with(get){
@@ -28,6 +29,9 @@ fn handle_connection(mut stream: TcpStream) {
         }
         else if buffer.starts_with(remote){
             ("HTTP/1.1 200 OK", "website/remote.html")
+        }
+        else if buffer.starts_with(downloads){
+            ("HTTP/1.1 200 OK", "website/downloads.html")
         }
         else {
             ("HTTP/1.1 404 NOT FOUND", "website/404.html")
